@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/assets/icon.png" />
+    <link rel="stylesheet" href="src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miguel Ryan</title>
+  </head>
+  <body>
+
+    <div class="top">
+      <h1>Miguel Ryan - Software Engineer</h1>
+    </div>
+
+    <div class="mainContent">
+      <div class="resume">
+        <canvas id="the-canvas"></canvas><div class="info"></div>
+        <div class="resumeControls">
+          <button id="prev">&lt;</button>
+          <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+          <button id="next">&gt;</button>
+        </div>
+      </div>
+
+      <div class="projects">
+        <h2>Projects</h2>
+        <button onclick="window.open('/chess', '_blank')">Play Chess against Stockfish</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="https://www.linkedin.com/in/miguel-r-0481b5196/" target="_blank"><img src="/assets/linkedin.svg" alt="LinkedIn Logo"></a>
+      <a href="github.com/MiguelRyan" target="_blank"><img src="/assets/github-mark.svg" alt="Github Logo"></a>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

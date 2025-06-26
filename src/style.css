@@ -1,0 +1,138 @@
+body {
+  background-color: #bab9b5;
+}
+
+.top {
+  position: fixed;
+  background-attachment: scroll;
+
+  left: 0; top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  align-content: center;
+  height: 10vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  border-bottom: 1px black solid;
+}
+
+.top h1 {
+  text-align: center;
+  font-size: 2vw;
+  color: #6a6767;
+}
+
+.mainContent {
+  position: absolute;
+  top: 13vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 53.03vh;
+  height: 75vh;
+  background-color: whitesmoke;
+  border-radius: 2%;
+}
+
+.projects button {
+  height: 7vh;
+  width: 20vw;
+  border: 0;
+
+  border-radius: 5%;
+  font-size: 15px;
+  background-color: #bab1b1;
+  color: whitesmoke;
+}
+canvas {
+  height: 75vh;
+  aspect-ratio: 0.707106;
+  max-width: 90vw;
+  border-radius: 2%;
+}
+.resumeControls {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resumeControls button {
+  width: 5vw;
+  border: 0;
+  background-color: whitesmoke;
+  color: black;
+}
+
+#prev, #next {
+  font-weight: bolder;
+  font-size: larger;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.footer{
+  background-attachment: scroll;
+
+  position: fixed;
+  left: 0; bottom: 0;
+  height: 7vh; width: 100vw;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border-top: 1px black solid;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer a {
+  margin-right: 20px;
+  height: 5vh;
+}
+
+.footer a img {
+  height: 5vh;
+}
+
+@media (max-width: 1000px) {
+  .top h1{
+    font-size: 25px;
+  }
+  .mainContent {
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+  }
+
+  canvas {
+    height: 127.7vw;
+    width: 90vw;
+    aspect-ratio: 0.707106;
+  }
+  .resumeControls button {
+    width: 30vw;
+
+  }
+  .projects {
+    margin-top: 20px;
+    width: 90vw;
+    height: fit-content;
+    margin-bottom: 10vh;
+  }
+
+  .projects button {
+    width: 60vw;
+    margin-bottom: 3vh;
+  }
+}
