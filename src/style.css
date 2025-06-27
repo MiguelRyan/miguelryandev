@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
+    background-color: #e6f3ff;
     scroll-behavior: smooth;
-    background-color: #a9abae;
 }
 
 html, body {
@@ -124,7 +124,7 @@ html, body {
     padding-left: 2rem;
 }
 
-#cert-edu {
+#cert-edu, #about-skills {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -132,12 +132,12 @@ html, body {
     gap: 2rem;
 }
 
-#certifications, #education {
+#certifications, #education, #about-me, #skills {
     flex: 1;
     max-width: 50%;
 }
 
-#certifications h3 {
+#certifications h2 {
     margin-bottom: 0;
 }
 
@@ -201,4 +201,45 @@ p {
     font-family: "Tinos", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.section-separator {
+    left: 13vw;
+    position: absolute;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 75vw;
+    height: 1px;
+    background-color: #a9abae;
+}
+
+#projects {
+    scroll-margin-top: 70px;
+    margin-top: 5vh;
+}
+#projects h4 {
+    margin-bottom: 0;
+}
+
+.project {
+    margin-bottom: 2rem;
+}
+
+.project-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-info p {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50vw;
+}
+
+.project-info img {
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
 }
