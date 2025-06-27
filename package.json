@@ -10,9 +10,5 @@
   },
   "devDependencies": {
     "vite": "^6.3.5"
-  },
-  "dependencies": {
-    "pdfjs-dist": "^5.2.133",
-    "url": "^0.11.4"
   }
 }

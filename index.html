@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <link rel="icon" href="/assets/icon.png" />
     <link rel="stylesheet" href="src/style.css">
@@ -8,32 +9,124 @@
     <title>Miguel Ryan</title>
   </head>
   <body>
+    <section id="landing-page">
+      <div id="landing-text">
+        <h1>Miguel Ryan</h1>
+        <h3>Software Engineer</h3>
+        <h5>Dublin, Ireland</h5>
+        <button id="scrollToAbout">About me</button>
+      </div>
+      <div id="background"></div>
+    </section>
 
-    <div class="top">
-      <h1>Miguel Ryan - Software Engineer</h1>
-    </div>
+    <section id="body">
+      <nav class="nav">
+        <div class="site-title">Miguel Ryan</div>
+        <ul class="nav-links">
+          <li><a href="#landing-page">Home</a></li>
+          <li><a href="#body">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="headerDivider"></div>
+      <div class="content-wrapper">
+      <section id="about-section">
+        <div id="about-container">
+          <h2>About Me</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus nunc ac commodo commodo.
+            Ut non nunc odio. Donec dignissim arcu et facilisis cursus. Vestibulum varius non magna nec sodales.
+            Fusce eget rutrum odio, in accumsan tortor. Aliquam erat volutpat. Vestibulum iaculis justo eget nulla interdum pharetra.
+            Morbi luctus nibh ac urna porta vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+            turpis egestas. Etiam at ex porta, viverra odio et, varius neque. Aliquam vel vulputate augue, in faucibus sapien. Curabitur
+            mollis cursus dolor vitae fermentum. Sed eget ante at lectus euismod congue nec at odio. In hac habitasse platea dictumst.
+            Cras eleifend lectus diam, sed interdum massa interdum quis. Nam tincidunt lectus consequat viverra maximus.
+          </p>
+          <p>
+            Duis sodales in erat et luctus. Sed vehicula diam in leo tristique, eu accumsan nunc auctor.
+            Quisque ut purus at leo viverra luctus. Phasellus lorem lacus, molestie id accumsan non, efficitur nec quam.
+            Aenean vestibulum consectetur nisi, a pellentesque mauris. Ut neque orci, aliquet in sapien et,
+            sollicitudin convallis nisl. Sed tristique, mauris et gravida ornare, mi turpis semper nulla,
+            a semper nisi ante non mi. Suspendisse fermentum ante a lectus eleifend scelerisque.
+            Aliquam tincidunt sem velit, id eleifend augue accumsan condimentum. Nulla hendrerit purus et sem malesuada bibendum.
+            Cras sollicitudin porttitor erat quis auctor. In vestibulum purus ut quam varius ullamcorper.
+            Pellentesque faucibus, arcu eget tincidunt consectetur, risus magna gravida massa, nec aliquam enim metus vitae ligula.
+          </p>
 
-    <div class="mainContent">
-      <div class="resume">
-        <canvas id="the-canvas"></canvas><div class="info"></div>
-        <div class="resumeControls">
-          <button id="prev">&lt;</button>
-          <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-          <button id="next">&gt;</button>
+          <div id="cert-edu">
+
+          <div id="certifications">
+            <h3>Certifications</h3>
+            <div id="cert-entries">
+              <div class="cert-container">
+                <h4>AWS Solutions Architect</h4>
+                <img src="/assets/aws-certified-solutions-architect-associate.png" alt="AWS Solutions Architect Badge">
+              </div>
+              <div class="cert-container">
+                <h4>AWS Solutions Architect</h4>
+                <img src="/assets/aws-certified-solutions-architect-associate.png" alt="AWS Solutions Architect Badge">
+              </div>
+            </div>
+          </div>
+
+          <div id="education">
+            <h3>Education</h3>
+            <div class="education-container">
+              <h4>MSc Computer Science</h4>
+              <img src="/assets/ucd.png" alt="AWS Solutions Architect Badge">
+            </div>
+            <div class="education-container">
+              <h4>BSc Computational Social Science</h4>
+              <img src="/assets/ucd.png" alt="AWS Solutions Architect Badge">
+            </div>
+          </div>
+          </div>
         </div>
-      </div>
-
-      <div class="projects">
+      </section>
+      <section id="projects">
         <h2>Projects</h2>
-        <button onclick="window.open('/chess', '_blank')">Play Chess against Stockfish</button>
+        <canvas height="5000px"></canvas>
+      </section>
       </div>
-    </div>
 
-    <div class="footer">
-      <a href="https://www.linkedin.com/in/miguel-r-0481b5196/" target="_blank"><img src="/assets/linkedin.svg" alt="LinkedIn Logo"></a>
-      <a href="github.com/MiguelRyan" target="_blank"><img src="/assets/github-mark.svg" alt="Github Logo"></a>
-    </div>
+    </section>
+
+
+
 
     <script type="module" src="/src/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+    <script>
+      VANTA.WAVES({
+        el: "#background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x223e61,
+        shininess: 40.00,
+        waveHeight: 17.50,
+        waveSpeed: 0.55,
+        zoom: 0.83
+      })
+    </script>
+    <script>
+      document.getElementById('scrollToAbout').addEventListener('click', () => {
+        const aboutSection = document.getElementById('about-section');
+        const navHeight = document.querySelector('.nav').offsetHeight;
+
+        const offsetTop = aboutSection.getBoundingClientRect().top + window.scrollY - navHeight;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    </script>
   </body>
 </html>
