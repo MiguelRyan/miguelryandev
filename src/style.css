@@ -179,8 +179,8 @@ html, body {
 }
 
 .education-container img {
-    max-width: 30px;
-    margin-left: 10px; /* space between img and text */
+    max-width: 50px;
+    margin-right: 15px;
 }
 
 .headerDivider {
@@ -236,10 +236,52 @@ p {
     flex: 1;
     min-width: 300px;
     max-width: 50vw;
+    text-align: justify;
 }
 
 .project-info img {
-    max-width: 300px;
+    max-width: 250px;
     height: auto;
     object-fit: contain;
+}
+
+.project-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50vw;
+}
+
+.project-text p {
+    text-align: justify;
+    margin-bottom: 0.5rem;
+}
+
+.project-text a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-family: "Tinos", serif;
+    color: #405cf5;
+    text-decoration: none;
+}
+
+.project-text a:hover {
+    text-decoration: underline;
+}
+
+#projects-container {
+    background-color: white;
+    margin: auto;
+    width: 75%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#skills-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45vw;
+    gap: 10px 10px;
+}
+#skills-images img {
+    max-height: 100px;
 }
